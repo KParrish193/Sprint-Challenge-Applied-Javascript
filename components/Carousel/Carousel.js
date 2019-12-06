@@ -17,3 +17,38 @@
     <div class="right-button"> > </div>
   </div>
 */
+
+function carouselMaker(){
+
+  const carouselDiv = document.createElement('div');
+  const carouselLeft = document.createElement('div');
+  const carouselImgMtn = document.createElement('img');
+  const carouselImgComp = document.createElement('img');
+  const carouselImgTrees = document.createElement('img');
+  const carouselImgTrnTbl = document.createElement('img');
+  const carouselRight = document.createElement('div');
+
+  carouselDiv.classList.add('carousel');
+  carouselLeft.classList.add('left-button');
+  carouselRight.classList.add('right-button');
+
+  
+  carouselImgMtn.src = './assets/carousel/mountains.jpeg';
+  carouselImgComp.src = './assets/carousel/computer.jpeg';
+  carouselImgTrees.src = './assets/carousel/trees.jpeg';
+  carouselImgTrnTbl.src = './assets/carousel/computer.jpeg';
+  // carouselLeft.textContent = 	U+219E;
+  // carouselRight.textContent = U+21A0;
+
+  carouselDiv.appendChild(carouselLeft);
+  carouselDiv.appendChild(carouselImgMtn);
+  carouselDiv.appendChild(carouselImgComp);
+  carouselDiv.appendChild(carouselImgTrees);
+  carouselDiv.appendChild(carouselImgTrnTbl);
+  carouselDiv.appendChild(carouselRight);
+
+  return carouselDiv
+  };
+
+  const carouselEntryPoint = document.querySelector('.carousel-container');
+    carouselEntryPoint.appendChild(carouselMaker());
